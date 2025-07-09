@@ -19,7 +19,7 @@ tasks.test {
     useJUnitPlatform()
 
     // Настройки параллельности для Gradle
-    maxParallelForks = (Runtime.getRuntime().availableProcessors() / 2).coerceAtLeast(1) // Оптимальное число потоков
+//    maxParallelForks = (Runtime.getRuntime().availableProcessors() / 2).coerceAtLeast(1) // Оптимальное число потоков
 
     // Логирование
     testLogging {
@@ -32,6 +32,7 @@ tasks.test {
     systemProperties.putAll(mapOf(
         "junit.jupiter.execution.parallel.enabled" to "true",
         "junit.jupiter.execution.parallel.mode.default" to "concurrent",
-        "junit.jupiter.execution.parallel.mode.classes.default" to "concurrent"
+        "junit.jupiter.execution.parallel.mode.classes.default" to "concurrent",
+        "junit.jupiter.execution.parallel.config.fixed.parallelism" to 4
     ))
 }

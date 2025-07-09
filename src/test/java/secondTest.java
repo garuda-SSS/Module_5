@@ -4,7 +4,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class secondTest {
+public class SecondTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"admin", "user", "guest"})
@@ -13,5 +13,6 @@ public class secondTest {
         assertNotNull(role);
         assertTrue(true);
         assertFalse(false);
+        System.out.println(Thread.currentThread().getName() + " — " + "testLogin");
     }
 }

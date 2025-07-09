@@ -2,7 +2,7 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class firstTest {
+public class FirstTest {
     @BeforeAll
     public static void begin(){
         System.out.println("Начало тестового прогона");
@@ -28,5 +28,6 @@ public class firstTest {
     @Test
     public void justSmth(){
         assertEquals(5, 5);
+        System.out.println(Thread.currentThread().getName() + " — " + "justSmth");
     }
 }
